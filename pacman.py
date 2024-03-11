@@ -218,10 +218,10 @@ def main() -> None:
                 game_over_text = font.render("GAME OVER", True, (255, 255, 255))
                 pacman.blit(game_over_text, (SCREEN_WIDTH // 2 - game_over_text.get_width() // 2, SCREEN_HEIGHT // 2 - game_over_text.get_height() // 2))
                 pygame.display.flip()
-                while 1:
-                    for event in pygame.event.get():
-                        if event.type == pygame.QUIT:
-                            exit()
+                #while 1:
+                #    for event in pygame.event.get():
+                #        if event.type == pygame.QUIT:
+                #            exit()
 
         clock.tick(60)
 
