@@ -1,9 +1,10 @@
 FROM python:3.11-slim
 
 ENV DISPLAY=host.docker.internal:0.0
+COPY requirements.txt /
 
 RUN apt-get update
-RUN pip install pygame  
+RUN pip install -r requirements.txt
 RUN apt-get install -y x11-apps
 
 ENV DISPLAY=host.docker.internal:0.0
